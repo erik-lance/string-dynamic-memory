@@ -128,12 +128,16 @@ String* substitute(String* s, char *find, char *replace){
 
 int compare(String* s1, String* s2){
 
-  while (s1->nextLetter != NULL && s1->nextLetter != NULL){
+  while (s1->nextLetter != NULL && s2->nextLetter != NULL){
     if(s1->letter != s2->letter)
       return 0;
     s1 = s1->nextLetter;
     s2 = s2->nextLetter;
   }
+
+  if(s1->nextLetter != NULL || s2->nextLetter != NULL)
+    return 0; 
+
   return 1;
 }
 
