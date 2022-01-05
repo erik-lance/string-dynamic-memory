@@ -15,7 +15,7 @@ String* create(){
 
 /*
 * Adds given letter at the end of the string
-* @param s address to the first character of the string
+* @param s* address to the first character of the string
 * @param c character to be added
 * @return pointer to the first letter of the string
 */
@@ -32,7 +32,7 @@ String* add(String* s, char c){
 
 /*
 * Inserts a letter to a given position in the string
-* @param s address to the first character of the string
+* @param s* address to the first character of the string
 * @param c character to be added
 * @param pos index to insert the character
 * @return pointer to the first letter of the string
@@ -77,6 +77,14 @@ String* delete(String* s, int pos){
   return newStr;
 }
 
+/*
+* Searches a substring of *find inside s* and replaces
+* that with *replace
+* @param s* is the string to manipulate
+* @param find* is the substring to find inside s*
+* @param replace* is the string to replace find* with
+* @return newly manipulated string
+*/
 String* substitute(String* s, char *find, char *replace){
   String* newStr = create();
   String* temp = s; //store head
@@ -126,6 +134,12 @@ String* substitute(String* s, char *find, char *replace){
   return newStr;
 }
 
+/*
+* Checks for string equality
+* @param s1* is the first string to compare
+* @param s2* is the string to compare it to
+* @return 1 if equal, else 0
+*/
 int compare(String* s1, String* s2){
 
   while (s1->nextLetter != NULL && s2->nextLetter != NULL){
@@ -141,6 +155,11 @@ int compare(String* s1, String* s2){
   return 1;
 }
 
+/*
+* Simply checks how long a string is
+* @param s* is the string to check
+* @return the number of characters inside s*
+*/
 int getLength(String* s){
   int length = 0;
   while (s->nextLetter != NULL){
@@ -151,7 +170,10 @@ int getLength(String* s){
   return length;
 }
 
-
+/*
+* Simply prints each character of the string
+* @param s* is the string to print
+*/
 void print (String* s){
   while(s != NULL){
     printf("%c", s->letter);

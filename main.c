@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "str.h"
-
+/**
+ * CSADPRG
+ * Mini MP2: Dynamic Memory Management and Data Type (Strings)
+ * @author Castillo, Christian
+ * @author Palpallatoc, Aaron
+ * @author Tiongquico, Erik
+*/
 int main(void) {
 
   String *s1, *s2;
@@ -33,35 +39,6 @@ int main(void) {
   print (substitute(s2, "World", "CCPROG")); // this statement will return (Hello CCPROG!)
   printf ("%d\n", compare(s1, s2)); // this statement will return (0)
   printf ("%d\n", getLength(s1)); // this statement will return (5)
-
-
-  //Dont mind everything below, am just testing stuff -Christian
-  printf("\n\n\n\n");
-  String *test;
-
-  test = create();
-
-  add (test, 'H');
-  add (test, 'e');
-  add (test, 'l');
-  add (test, 'l');
-  add (test, 'o');
-  add (test, ' ');
-  add (test, 'W');
-  add (test, 'o');
-  add (test, 'r');
-  add (test, 'l');
-  add (test, 'd');
-  add (test, '!');
-
-  print(test);
-  print(delete(test, 0));
-  print(insert(test, 'o', 5));
-  print(substitute(test, "Hello World", "Nyaa~~"));
-  print(substitute(test, "llo World!", "ntai Haven     ~ Y E S ~"));
-  print(substitute(test, " ", "~<insert space>~"));
-
-  print(substitute(substitute(test, "Hello World!", "ABDEEFG"), "DEE", "JKLMOP"));
 
   return 0;
 }

@@ -1,6 +1,3 @@
-//Might rename the header file to avoid conflict with preprocessor "string.h"
-//edited to str.h - erik
-
 typedef struct Node {
     char letter;
     struct Node* nextLetter;
